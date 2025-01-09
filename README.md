@@ -7,6 +7,7 @@ This is a toy project of building a Huffman coder.
 <details>
 <summary>Deeper explanation</summary>
 We use the following propability distribution of letters:
+    
 ```python
 LETTERS = {
     " ":19.28,
@@ -38,6 +39,7 @@ LETTERS = {
     "z":0.07
 }
 ```
+
 Any other character will be disregarded. This has entropy of `4.10944619015985` bits.
 
 Using it results in this Huffman tree:
