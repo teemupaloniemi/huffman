@@ -2,7 +2,48 @@
 
 This is a toy project of building a Huffman coder. 
 
-## Using
+## How?
+
+<details>
+<summary>Deeper explanation</summary>
+We use the following propability distribution of letters:
+```python
+LETTERS = {
+    " ":19.28,
+    "a":5.75,
+    "b":1.28,
+    "c":2.63,
+    "d":2.85,
+    "e":9.13,
+    "f":1.73,
+    "g":1.33,
+    "h":3.13,
+    "i":5.99,
+    "j":0.06,
+    "k":0.84,
+    "l":3.35,
+    "m":2.35,
+    "n":5.96,
+    "o":6.89,
+    "p":1.92,
+    "q":0.08,
+    "r":5.08,
+    "s":5.67,
+    "t":7.06,
+    "u":3.34,
+    "v":0.69,
+    "w":1.19,
+    "x":0.73,
+    "y":1.64,
+    "z":0.07
+}
+```
+Any other character will be disregarded. This has entropy of `4.10944619015985` bits.
+
+Using it results in this Huffman tree:
+![image](tree.png)
+which is used for creating the encodings for the characters.
+</details>
 
 1. Run `./huffman.py`
 2. Follow the usage guide:
