@@ -89,11 +89,17 @@ def get_input(last):
 def dispatch(action, message, c, h):
     if action == "enc":
         m = clean(message, ENCCHARSET)
+        if len(m) == 0:
+            print("no encodable message found, check charset!")
+            return m
         e = encode(m, c, LETTERS)  
         print(f"ENCODED MESSAGE: {e}\nLENGTH: {len(e)}\nSHANNON OPTIMAL LENGTH: {h*len(m)}") 
         return e
     elif action == "dec":
         m = clean(message, DECCHARSET)
+        if len(m) == 0:
+            print("no decodable message found, check charset!")
+            return m
         d = decode(m, c, LETTERS)
         print(f"DECODED MESSAGE: {d}\nLENGTH: {len(d)}") 
         return d
