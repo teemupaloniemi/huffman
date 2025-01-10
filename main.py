@@ -8,6 +8,7 @@ ENCCHARSET = " abcdefghijklmnopqrstuvwxyz"
 DECCHARSET = "01"
 USAGE = f"""
 usage:
+     codes 
      dec <string to decode>
      enc <string to encode>
 
@@ -17,6 +18,14 @@ Example:
 
     >dec 10100011001010101010110001001010111011010110101001100111010110101010101010110
      kissa istuu puussa
+
+    >codes
+     _->00       
+     a->0110     
+     b->010000   
+     ... 
+     y->101001   
+     z->1111000011
 
 Please use only items from these charsets:
 
@@ -88,6 +97,9 @@ def dispatch(action, message, c, h):
         d = decode(m, c, LETTERS)
         print(f"DECODED MESSAGE: {d}\nLENGTH: {len(d)}") 
         return d
+    elif action == "codes":
+        for idx, ci in enumerate(c):
+            print(f"{list(LETTERS.keys())[idx]:1s}->{ci:9s}")
     else:
         print(USAGE)
     return None
