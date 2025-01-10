@@ -47,7 +47,7 @@ Using it results in this Huffman tree:
 which is used for creating the encodings for the characters.
 </details>
 
-1. Run `./huffman.py`
+1. Run `./main.py`
 2. Follow the usage guide:
 ```
 usage:
@@ -61,11 +61,10 @@ Example:
     >dec 10100011001010101010110001001010111011010110101001100111010110101010101010110
      kissa istuu puussa
 
-Please use only items from this charset:
+Please use only items from these charsets:
 
-{CHARSET}
-
-I try to parse everything else away, but have not accounted for everything."""
+encoding:  abcdefghijklmnopqrstuvwxyz 
+decoding: 01
 ```
 
 ## Why?
